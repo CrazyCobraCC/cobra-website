@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos – CrazyCobraCC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --neon-cyan:    #00f7ff;
+      --neon-green:   #39ff14;
+      --neon-purple:  #b44fff;
+      --bg:           #050810;
+      --glass-bg:     rgba(255,255,255,0.05);
+      --glass-border: rgba(0,247,255,0.18);
+      --text:         #e8f0ff;
+      --text-muted:   #7a8caa;
+      --font-head:    'Exo 2', sans-serif;
+      --font-body:    'Rajdhani', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 30% 20%, rgba(0,247,255,0.07) 0%, transparent 60%),
+        linear-gradient(rgba(0,247,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,247,255,0.02) 1px, transparent 1px);
+      background-size: auto, 60px 60px, 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 2.5rem;
+      background: rgba(5,8,16,0.8);
+      border-bottom: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .nav-logo img {
+      height: 48px; width: auto; display: block;
+      filter: drop-shadow(0 0 8px var(--neon-cyan));
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--neon-cyan);
+      text-shadow: 0 0 12px var(--neon-cyan);
+    }
+    .placeholder-body {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .placeholder-body h1 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+    .placeholder-body p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 420px;
+      margin-bottom: 2rem;
+    }
+    .wip-badge {
+      display: inline-block;
+      padding: 0.3rem 1.2rem;
+      border-radius: 50px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(0,247,255,0.08);
+      color: var(--neon-cyan);
+      border: 1px solid rgba(0,247,255,0.25);
+    }
+    .yt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--neon-cyan), #4d9fff);
+      color: #050810;
+      box-shadow: 0 0 20px rgba(0,247,255,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .yt-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 36px rgba(0,247,255,0.55);
+    }
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 1.75rem 2rem;
+      border-top: 1px solid var(--glass-border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--neon-cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="CC_Logo.PNG" alt="CrazyCobra" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About CrazyCobra</a></li>
+      <li><a href="msm-tools.html">MSM Tools</a></li>
+    </ul>
+  </nav>
+  <div class="placeholder-body">
+    <h1>Videos</h1>
+    <!-- EDIT: Build this page out when ready with YouTube embeds -->
+    <p>Video embeds coming soon. In the meantime, you can watch everything on YouTube directly.</p>
+    <span class="wip-badge">Work in Progress</span>
+    <br/>
+    <a class="yt-link" href="https://www.youtube.com/@CrazyCobraCC" target="_blank" rel="noopener">
+      ▶ Watch on YouTube
+    </a>
+  </div>
+  <footer>
+    <p>© 2025 CrazyCobra · <a href="https://www.youtube.com/@CrazyCobraCC" target="_blank" rel="noopener">YouTube</a> · <a href="index.html">Home</a></p>
+  </footer>
+</body>
+</html>
